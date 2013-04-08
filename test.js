@@ -92,6 +92,7 @@ $(document).ready(function() {
 		attr: 'name',
 		noCase: true,
 		ul_class: 'autocomplete shadow',
-		ul_css: {'z-index':1234}
+		ul_css: {'z-index':1234},
+    max_results: 5
 	});
 });

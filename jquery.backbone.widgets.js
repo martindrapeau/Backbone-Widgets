@@ -81,7 +81,8 @@
 		ul_css: null,
 		li_class: null,
 		li_css: null,
-		width: null
+		width: null,
+		max_results: null
 	};
 	
 	var methods = {
@@ -166,6 +167,10 @@
 				list_em.hide();
 				return this;
 			};
+
+			if(options.max_results && !isNaN(options.max_results)) {
+				result = result.slice(0, options.max_results);
+			}
 			
 			// We found some - position and show
 			list_em.empty();
